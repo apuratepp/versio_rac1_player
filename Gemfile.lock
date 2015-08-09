@@ -1,14 +1,3 @@
-GIT
-  remote: git@github.com:apuratepp/versio_rac1-podcast.git
-  revision: 8828a382285b8be3027943a15ce39e251add6f8a
-  branch: master
-  specs:
-    versio_rac1-podcast (0.1.0)
-      activesupport
-      faraday
-      nokogiri
-      virtus
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -155,6 +144,11 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    versio_rac1-podcast (0.1.0)
+      activesupport
+      faraday
+      nokogiri
+      virtus
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -181,7 +175,7 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
-  versio_rac1-podcast!
+  versio_rac1-podcast
   web-console (~> 2.0)
 
 BUNDLED WITH
