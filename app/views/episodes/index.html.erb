@@ -1,0 +1,8 @@
+<% @episodes.each do |episode| %>
+  <h4><%= episode.title %></h4>
+  <h4><%= episode.broadcasted_at %></h4>
+  <audio controls preload=none>
+    <source src="<%= episode.link %>" type="audio/mpeg">
+  </audio>
+  <hr />
+<% end %>
