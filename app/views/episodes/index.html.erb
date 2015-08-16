@@ -1,10 +1,3 @@
-<%= link_to "All Episodes", episodes_path %>
-
-<%= form_tag(episodes_path, method: :get) do  %>
-  <%= date_select :date, :broadcasted_at %>
-  <%= submit_tag :search %>
-<% end %>
-
 <% @episodes.each do |episode| %>
   <h4><%= episode.title %></h4>
   <h4><%= episode.broadcasted_at %></h4>

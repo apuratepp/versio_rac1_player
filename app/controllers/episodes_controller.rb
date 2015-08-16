@@ -1,20 +1,16 @@
 class EpisodesController < ApplicationController
+
   def index
-    @episodes = episodes
+    @episodes = VersioRac1::Podcast::Episode.find(date_time_from_params.to_time)
   end
 
   private
 
-  def date_params
-    params[:date]
-  end
-
-  def episodes
-    if date_params
-      date = DateTime.parse(date_params.map {|k,v| v}.join("-"))
-      VersioRac1::Podcast::Episode.find(date.to_time)
+  def date_time_from_params
+    if params[:year]
+      DateTime.parse("#{params[:year]}-#{params[:month]}-#{params[:day]}")
     else
-      VersioRac1::Podcast::Episode.all
+      DateTime.now
     end
   end
 end
