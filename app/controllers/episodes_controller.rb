@@ -1,7 +1,7 @@
 class EpisodesController < ApplicationController
-
   def index
-    @episodes = VersioRac1::Podcast::Episode.find(date_time_from_params.to_time)
+    episodes = VersioRac1::Podcast::Episode.find(date_time_from_params.to_time)
+    @episodes = VersioRac1::Podcast::EpisodeDecorator.decorate_collection(episodes)
   end
 
   private
