@@ -1,8 +1,9 @@
+<h1>Versió Rac1</h1>
+<h2><%=l @episodes.first.broadcasted_at.to_date, format: :long %></h2>
+
 <% @episodes.each do |episode| %>
-  <h4><%= episode.title %></h4>
-  <h4><%= episode.broadcasted_at %></h4>
-  <audio controls preload=none>
-    <source src="<%= episode.link %>" type="audio/mpeg">
-  </audio>
-  <hr />
+  <div class="episode">
+    <h3><%= episode.broadcasted_at.strftime("%R") %></h3>
+    <audio controls preload=none src="<%= episode.link %>" type="audio/mpeg"></audio>
+  </div>
 <% end %>

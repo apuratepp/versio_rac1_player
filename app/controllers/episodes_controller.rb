@@ -10,7 +10,7 @@ class EpisodesController < ApplicationController
     if params[:year]
       DateTime.parse("#{params[:year]}-#{params[:month]}-#{params[:day]}")
     else
-      DateTime.now
+      DateTime.current.beginning_of_day
     end
   end
 end
