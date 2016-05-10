@@ -1,9 +1,9 @@
 <h1>Versió Rac1</h1>
 
 <h2>
-  <%= link_to l(@episodes.first.previous_broadcasted_at, format: :rfc822), @episodes.first.previous_broadcasted_at_params %>
-  <%=l @episodes.first.broadcasted_at, format: :rfc822 %>
-  <%= link_to l(@episodes.first.next_broadcasted_at, format: :rfc822), @episodes.first.next_broadcasted_at_params %>
+  <%= link_to l(@episodes.first.previous_broadcasted_at, format: :long), @episodes.first.previous_broadcasted_at_params %>
+  <%=l @episodes.first.broadcasted_at, format: :long %>
+  <%= link_to l(@episodes.first.next_broadcasted_at, format: :long), @episodes.first.next_broadcasted_at_params %>
 </h2>
 
 <% @episodes.each do |episode| %>
